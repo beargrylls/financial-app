@@ -30,10 +30,11 @@
 			      <td align="left"><input type="text" name="horizon" id="horizon"/> </td>
 			    </tr>
 			  </table>
-    		<input type="submit"/>    		
+    		<input type="submit" value="Compute"/>    		
 		</form>
 
         <p>${call}</p>
+        <p style="color:red">${error}</p>
         
         <a href="index.jsp">Back</a>
     </body>
