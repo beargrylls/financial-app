@@ -4,10 +4,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Black-Scholes Call Value!</title>
+        <title>Black-Scholes European Put Value</title>
     </head>
     <body>
-        <form action="call" method="POST">    		
+        <form action="eput" method="POST">    		
     		<table>
 			    <tr>
 			      <td align="left">Spot price:</td>

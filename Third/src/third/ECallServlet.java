@@ -10,11 +10,11 @@ import javax.servlet.http.*;
 import org.apache.commons.math3.distribution.NormalDistribution;
 
 @SuppressWarnings("serial")
-public class CallServlet extends HttpServlet {
+public class ECallServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException{
 		
-		req.getRequestDispatcher("/jsp/call.jsp").forward(req, resp);
+		req.getRequestDispatcher("/jsp/ecall.jsp").forward(req, resp);
 	}
 	
 	public void doPost(HttpServletRequest req, HttpServletResponse resp)
@@ -31,24 +31,24 @@ public class CallServlet extends HttpServlet {
 		}
 		catch(NumberFormatException e){
 			req.setAttribute("error", " Invalid input");
-			req.getRequestDispatcher("/jsp/call.jsp").forward(req, resp);
+			req.getRequestDispatcher("/jsp/ecall.jsp").forward(req, resp);
 			return;
 		}
 		
 		if(s <= 0 || sigma <= 0 || k <= 0 || T <= 0){
 			req.setAttribute("error", " Invalid input");
-			req.getRequestDispatcher("/jsp/call.jsp").forward(req, resp);
+			req.getRequestDispatcher("/jsp/ecall.jsp").forward(req, resp);
 			return;
 		}			
 		
 		double d1 = 1/(sigma*Math.sqrt(T))*(Math.log(s/k) + (r + sigma*sigma/2)*T);
 		double d2 = d1 - sigma*Math.sqrt(T);
 		NormalDistribution Z = new NormalDistribution();
-		double callValue = Z.cumulativeProbability(d1)*s - Z.cumulativeProbability(d2)*k*Math.pow(Math.E, -r*T);
+		double ecallValue = Z.cumulativeProbability(d1)*s - Z.cumulativeProbability(d2)*k*Math.pow(Math.E, -r*T);
 		//round off to the nearest hundredth
-		callValue = (new BigDecimal(callValue)).setScale(2, RoundingMode.HALF_UP).doubleValue();
+		ecallValue = (new BigDecimal(ecallValue)).setScale(2, RoundingMode.HALF_UP).doubleValue();
 
-        req.setAttribute("call", "Call value: " + callValue);        
-        req.getRequestDispatcher("/jsp/call.jsp").forward(req, resp);
+        req.setAttribute("call", "Call value: " + ecallValue);        
+        req.getRequestDispatcher("/jsp/ecall.jsp").forward(req, resp);
 	}
 }

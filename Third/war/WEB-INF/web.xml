@@ -5,12 +5,20 @@ xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	<servlet>
-		<servlet-name>Call</servlet-name>
-		<servlet-class>third.CallServlet</servlet-class>
+		<servlet-name>ECall</servlet-name>
+		<servlet-class>third.ECallServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>EPut</servlet-name>
+		<servlet-class>third.EPutServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>Call</servlet-name>
-		<url-pattern>/call</url-pattern>
+		<servlet-name>ECall</servlet-name>
+		<url-pattern>/ecall</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>EPut</servlet-name>
+		<url-pattern>/eput</url-pattern>
 	</servlet-mapping>
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>

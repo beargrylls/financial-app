@@ -20,7 +20,10 @@
         <td colspan="2" style="font-weight:bold;">Available Products:</td>        
       </tr>
       <tr>
-        <td><a href="call">European/American Call</a></td>
+        <td><a href="ecall">European Call</a></td>
+      </tr>
+      <tr>
+        <td><a href="eput">European Put</a></td>
       </tr>
     </table>
     <div style="position: absolute; bottom: 0px;">
