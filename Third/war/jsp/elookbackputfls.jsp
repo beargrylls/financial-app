@@ -26,10 +26,6 @@
 			      <td align="left"><input type="text" name="vol" id="vol"/></td>
 			    </tr>
 			    <tr>
-			      <td align="left">Strike: </td>
-			      <td align="left"><input type="text" name="strike" id="strike"/> </td>
-			    </tr>
-			    <tr>
 			      <td align="left">Time horizon (days): </td>
 			      <td align="left"><input type="text" name="horizon" id="horizon"/> </td>
 			    </tr>
@@ -37,7 +33,7 @@
     		<input type="submit" value="Compute"/>    		
 		</form>
 
-        <p>${call}</p>
+        <p>${lookbackputfls}</p>
         <p style="color:red">${error}</p>
         
         <a href="index.jsp">Back</a>

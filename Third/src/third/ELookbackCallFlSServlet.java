@@ -32,13 +32,13 @@ public class ELookbackCallFlSServlet extends HttpServlet {
 		}
 		catch(NumberFormatException e){
 			req.setAttribute("error", " Invalid input");
-			req.getRequestDispatcher("/jsp/ecall.jsp").forward(req, resp);
+			req.getRequestDispatcher("/jsp/elookbackcallfls.jsp").forward(req, resp);
 			return;
 		}
 		
 		if(s <= 0 || sigma <= 0 || m <= 0 || T <= 0){
 			req.setAttribute("error", " Invalid input");
-			req.getRequestDispatcher("/jsp/ecall.jsp").forward(req, resp);
+			req.getRequestDispatcher("/jsp/elookbackcallfls.jsp").forward(req, resp);
 			return;
 		}			
 		
