@@ -4,14 +4,18 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Black-Scholes European Call Value</title>
+        <title>Black-Scholes European Put Value</title>
     </head>
     <body>
-        <form action="ecall" method="POST">    		
+        <form action="elookbackputfls" method="POST">    		
     		<table>
 			    <tr>
 			      <td align="left">Underlying spot price:</td>
 			      <td align="left"><input type="text" name="spot" id="spot"/></td>
+			    </tr>
+			    <tr>
+			      <td align="left">Underlying maximum hitherto:</td>
+			      <td align="left"><input type="text" name="max" id="max"/></td>
 			    </tr>
 			    <tr>
 			      <td align="left">Annual risk-free interest rate: </td>

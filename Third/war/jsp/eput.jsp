@@ -10,7 +10,7 @@
         <form action="eput" method="POST">    		
     		<table>
 			    <tr>
-			      <td align="left">Spot price:</td>
+			      <td align="left">Underlying spot price:</td>
 			      <td align="left"><input type="text" name="spot" id="spot"/></td>
 			    </tr>
 			    <tr>
@@ -26,7 +26,7 @@
 			      <td align="left"><input type="text" name="strike" id="strike"/> </td>
 			    </tr>
 			    <tr>
-			      <td align="left">Time horizon(years): </td>
+			      <td align="left">Time horizon (days): </td>
 			      <td align="left"><input type="text" name="horizon" id="horizon"/> </td>
 			    </tr>
 			  </table>

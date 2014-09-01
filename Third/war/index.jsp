@@ -25,10 +25,16 @@
       <tr>
         <td><a href="eput">European Put</a></td>
       </tr>
+      <tr>
+        <td><a href="elookbackcallfls">European Lookback Call with Floating Strike</a></td>
+      </tr>
+      <tr>
+        <td><a href="elookbackputfls">European Lookback Put with Floating Strike</a></td>
+      </tr>
     </table>
     <div style="position: absolute; bottom: 0px;">
-    <p>Disclaimer: This web app is for educational purposes only, hence the author 
-    cannot be held accountable for the inaccuracies of the computations. Development
+    <p>Disclaimer: This web app is for educational purposes only and the author 
+    cannot take responsibility for inaccuracies in the computations. Development
     is still in progress, which means exception handling may be somewhat unreliable. Feedback
     and comments are welcome at nikolay dot vasilev at cs dot helsinki dot fi.</p>
     </div>

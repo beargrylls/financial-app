@@ -29,7 +29,7 @@ public class EPutServlet extends HttpServlet {
 			r = Double.parseDouble(req.getParameter("interest"));
 			sigma = Double.parseDouble(req.getParameter("vol"));
 			k = Double.parseDouble(req.getParameter("strike"));
-			T = Double.parseDouble(req.getParameter("horizon"));
+			T = Double.parseDouble(req.getParameter("horizon"))/365;
 		}
 		catch(NumberFormatException e){
 			req.setAttribute("error", " Invalid input");

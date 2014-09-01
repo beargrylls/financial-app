@@ -4,14 +4,18 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Black-Scholes European Call Value</title>
+        <title>Black-Scholes European Lookback Call with Floating Strike</title>
     </head>
     <body>
-        <form action="ecall" method="POST">    		
+        <form action="elookbackcallfls" method="POST">    		
     		<table>
 			    <tr>
 			      <td align="left">Underlying spot price:</td>
 			      <td align="left"><input type="text" name="spot" id="spot"/></td>
+			    </tr>
+			    <tr>
+			      <td align="left">Underlying minimum hitherto:</td>
+			      <td align="left"><input type="text" name="min" id="min"/></td>
 			    </tr>
 			    <tr>
 			      <td align="left">Annual risk-free interest rate: </td>
@@ -22,10 +26,6 @@
 			      <td align="left"><input type="text" name="vol" id="vol"/></td>
 			    </tr>
 			    <tr>
-			      <td align="left">Strike: </td>
-			      <td align="left"><input type="text" name="strike" id="strike"/> </td>
-			    </tr>
-			    <tr>
 			      <td align="left">Time horizon (days): </td>
 			      <td align="left"><input type="text" name="horizon" id="horizon"/> </td>
 			    </tr>
@@ -33,7 +33,7 @@
     		<input type="submit" value="Compute"/>    		
 		</form>
 
-        <p>${call}</p>
+        <p>${lookbackcallfls}</p>
         <p style="color:red">${error}</p>
         
         <a href="index.jsp">Back</a>
